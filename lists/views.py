@@ -25,10 +25,15 @@ def home_page(request):
     #     'new_item_text': new_item_text,
     # }
 
-    # 3
+
     if request.method == 'POST':
         Item.objects.create(text=request.POST['item_text'])
         return redirect('/')
+
+    items = Item.objects.all()
+    return render(request, 'home.html', {'items': items})
+
+
 
     return render(request, 'home.html')
 
