@@ -1,0 +1,14 @@
+1493731916738	geckodriver	INFO	Listening on 127.0.0.1:51216
+1493731917158	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.6fB9ckGz4Z2y
+1493731917160	geckodriver::marionette	INFO	Starting browser D:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1493731917203	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51220
+1493731919732	Marionette	INFO	Listening on port 51220
+1493731922522	Marionette	INFO	startBrowser 21e38da4-2a54-4f21-b449-5dc866897d3a
+[Child 5208] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6040] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7512] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+l error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x400003,name=PCompositable::Msg_Destroy) Channel error: cannot send/recv
+
