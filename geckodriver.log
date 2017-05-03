@@ -1,14 +1,22 @@
-1493731916738	geckodriver	INFO	Listening on 127.0.0.1:51216
-1493731917158	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.6fB9ckGz4Z2y
-1493731917160	geckodriver::marionette	INFO	Starting browser D:\Program Files (x86)\Mozilla Firefox\firefox.exe
-1493731917203	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51220
-1493731919732	Marionette	INFO	Listening on port 51220
-1493731922522	Marionette	INFO	startBrowser 21e38da4-2a54-4f21-b449-5dc866897d3a
-[Child 5208] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 6040] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 7512] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-l error: cannot send/recv
-
-
-###!!! [Child][MessageChannel] Error: (msgtype=0x400003,name=PCompositable::Msg_Destroy) Channel error: cannot send/recv
+1493804371846	geckodriver	INFO	Listening on 127.0.0.1:59813
+1493804372413	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.ZP4rtcroG42t
+1493804372416	geckodriver::marionette	INFO	Starting browser D:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1493804372522	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59818
+1493804375753	Marionette	INFO	Listening on port 59818
+1493804378133	Marionette	INFO	startBrowser a494f758-46d6-45f7-8ecf-aa067d15e49d
+[Child 2188] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+346
+[Child 7716] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7716] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:551:9
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker/<@resource://gre/components/nsAsyncShutdown.js:157:15
+Promise@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:388:5
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker@resource://gre/components/nsAsyncShutdown.js:153:29
+Barrier/this.client.addBlocker/promise</trigger@resource://gre/modules/AsyncShutdown.jsm:720:23
+Barrier.prototype<._wait@resource://gre/modules/AsyncShutdown.jsm:867:7
+Barrier.prototype<.wait@resource://gre/modules/AsyncShutdown.jsm:851:28
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:534:17
 
