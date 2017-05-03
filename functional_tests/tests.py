@@ -42,6 +42,7 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys(Keys.ENTER)
         time.sleep(3)
         edith_list_url = self.browser.current_url
+        print edith_list_url
         self.assertRegexpMatches(edith_list_url, '/lists/.+')
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')

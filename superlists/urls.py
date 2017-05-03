@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from lists.views import home_page, view_list, new_list
+from lists.views import home_page, view_list, new_list, add_item
 
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
-    # url(r'^/$', home_page),
-    # url(r'^blog/registerr/$', home_page),
-    url(r'^$', home_page),
-    url(r'^lists/the-only-list-in-the-world/$', view_list),
-    url(r'^lists/new$', new_list ),
+    url(r'^$', home_page, ),
+    url(r'^lists/(\d+)/$', view_list),
+    url(r'^lists/(\d+)/add_item$', add_item),
+    url(r'^lists/new$', new_list),
+    # url(r'^admin/', include(admin.site.urls)),
 ]
