@@ -40,6 +40,7 @@ class NewVisitorTest(LiveServerTestCase):
         # 她按回车键后，被带到了一个新URL
         # 待办事项表格中显示了“1: Buy peacock feathers”
         inputbox.send_keys(Keys.ENTER)
+        time.sleep(3)
         edith_list_url = self.browser.current_url
         self.assertRegexpMatches(edith_list_url, '/lists/.+')
         table = self.browser.find_element_by_id('id_list_table')
@@ -51,11 +52,11 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Use peacock feathers to make a fly')
         inputbox.send_keys(Keys.ENTER)
-
+        time.sleep(5)
         # 页面再次更新，她的清单中显示了这两个待办事项
         self.check_for_row_in_list_table('1: Buy peacock feathers')
         self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
-        self.fail('Finish the test!')
+        # self.fail('Finish the test!')
 
         # 现在一个叫作弗朗西斯的新用户访问了网站
         ## 我们使用一个新浏览器会话
@@ -74,8 +75,9 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
         # 弗朗西斯获得了他的唯一URL
+        time.sleep(3)
         francis_list_url = self.browser.current_url
-        self.assertRegex(francis_list_url, '/lists/.+')
+        self.assertRegexpMatches(francis_list_url, '/lists/.+')
         self.assertNotEqual(francis_list_url, edith_list_url)
         # 这个页面还是没有伊迪丝的清单
         page_text = self.browser.find_element_by_tag_name('body').text
@@ -91,8 +93,8 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn(row_text, [row.text for row in rows])
 
 
-    def test_can_start_alist_and_retrieve_it_later(self):
-        # 伊迪丝听说有一个很酷的在线待办事项应用
-        # 她去看了这个应用的首页
-        self.browser.get(self.live_server_url)
+    # def test_can_start_alist_and_retrieve_it_later(self):
+    #     # 伊迪丝听说有一个很酷的在线待办事项应用
+    #     # 她去看了这个应用的首页
+    #     self.browser.get(self.live_server_url)
 
