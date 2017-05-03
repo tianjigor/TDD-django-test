@@ -4,8 +4,10 @@ from selenium.webdriver.common.keys import Keys
 import unittest
 from django.http import HttpRequest
 import time
+from django.test import LiveServerTestCase
 
-class NewVisitorTest(unittest.TestCase):
+
+class NewVisitorTest(LiveServerTestCase):
 
 
     def setUp(self):
@@ -63,5 +65,8 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn(row_text, [row.text for row in rows])
 
 
-if __name__=='__main__':
-    unittest.main()
+    def test_can_start_a_list_and_retrieve_it_later(self):
+        # 伊迪丝听说有一个很酷的在线待办事项应用
+        # 她去看了这个应用的首页
+        self.browser.get(self.live_server_url)
+
